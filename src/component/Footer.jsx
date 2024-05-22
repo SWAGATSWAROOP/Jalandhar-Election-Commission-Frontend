@@ -4,7 +4,7 @@ function Footer(){
     return(
         <>
         <div className = "footer">
-         <h2> &copy; Swagat Swaroop Parida and Satyam Gupta</h2>
+         <h2> &copy; Jalandhar Election Commission</h2>
         </div>
         </>
     )
