@@ -22,8 +22,7 @@ function Navbar() {
                     <h1 style={{ fontSize: '24px' }}> <strong>District Election Office - Jalandhar</strong> </h1>
 
                     <h1 style={{ fontSize: '20px', fontWeight : 'bold' }}>ELECTION {currentYear}</h1>
-                    <h1 style={{ fontSize: '24px' }}><strong>VOTER in Queue</strong></h1>
-                    <h1>Abhi Bar BJP</h1>
+                    <h1 style={{ fontSize: '24px' }}><strong>VOTER in Queue</strong></h1> 
                     <div className="language-bar">
                         <label htmlFor="language">Choose a language: </label>
                         <select id="language" value={language} onChange={handleLanguageChange}>
