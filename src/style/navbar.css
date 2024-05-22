@@ -8,7 +8,7 @@
   
   .col-2, .col-6, .col-space {
     box-sizing: border-box;
-    text-align: center;
+    text-align: center; 
   }
 
   .col-2 {
@@ -16,7 +16,7 @@
     max-width: 100%;
   }
 
-  
+
   .col-6 {
     flex: 0 0 100%;
     max-width: 100%;
@@ -83,4 +83,8 @@
       margin-bottom: 0;
     }
   }
-  
+  @media (max-width : 768px){
+    .col-2 img {
+        max-width: 60%;
+      }
+  }

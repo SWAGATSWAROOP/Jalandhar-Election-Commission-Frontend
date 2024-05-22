@@ -14,7 +14,7 @@ function Navbar() {
                 <div className='col-space'>
 
                 </div>
-                <div className='col-2'>
+                <div className='col-2' style = {{display : 'flex', flexDirection : 'column', alignItems : 'center'}}>
                     <img src={Logo} alt="election-logo" />
                     <h3 style={{ display: 'wrap', color: '#2e3192' }}><strong>District Electoral Office Jalandhar</strong></h3>
                 </div>
