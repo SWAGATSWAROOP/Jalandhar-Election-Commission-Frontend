@@ -1,0 +1,54 @@
+/* AssemblyInfo.css */
+.assembly-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .tab {
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dropdown {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .submit-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive design for mobile users */
+  @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tab {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  

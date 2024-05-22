@@ -4,8 +4,7 @@ import Main from './component/Main';
 function App() { 
   return (
     <>
-      <Navbar/> 
-      <h2>My Satyam app js</h2>
+      <Navbar/>  
       <Main/>
       <Footer/>
     </>
