@@ -33,10 +33,7 @@
     border: none;
     cursor: pointer;
   }
-  .nav_btn:hover {
-    transform: scale(1.15);
-    background-color: #2f0f4f;
-  }
+
   
   .intro {
     display: flex;
@@ -61,7 +58,10 @@
       flex: 1;
       max-width: 16.6667%;
     }
-   
+    .nav_btn:hover {
+      transform: scale(1.15);
+      background-color: #2f0f4f;
+    }
   }
   @media (max-width : 768px){
     .col-2 img {

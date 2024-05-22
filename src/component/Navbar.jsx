@@ -41,7 +41,7 @@ function Navbar() {
             </div>
             <div className = "intro">
                 <h1>Know Polling Queue Estimates, Cast Your Vote!</h1>
-                <a style = {{textDecoration: 'underline', fontWeight : 'bold', color : 'blueviolet'}}href="https://www.google.com/maps">Click here to know about VOTER-IN-QUEUE information.</a>
+                <a style = {{textDecoration: 'underline', fontWeight : 'bold', color : 'blueviolet'}}href="https://www.google.com/maps">Click here to know about VOTER-IN-QUEUE information./</a>
                 <button className = "nav_btn" onClick = {() => window.open('https://electoralsearch.eci.gov.in/', '_blank')}>Know your Constitency and Part Number(Part Serial Number)
                 <br />ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ (ਪਾਰਟ ਸੀਰੀਅਲ ਨੰਬਰ) ਜਾਣੋ</button>
             </div>
