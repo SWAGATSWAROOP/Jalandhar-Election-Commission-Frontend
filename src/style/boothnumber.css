@@ -20,7 +20,9 @@
     border: none;
     cursor: pointer;
   }
-  
+.tab:hover{
+    background-color: #0564cb;
+}
   .form-container {
     display: flex;
     flex-direction: column;
@@ -30,7 +32,6 @@
   .dropdown {
     padding: 10px;
     margin: 10px 0;
-    
     border: 1px solid black;
   }
   
@@ -41,7 +42,9 @@
     border: none;
     cursor: pointer;
   }
-  
+  .submit-button:hover{
+    background-color: #257b39;
+  }
   /* Responsive design for mobile users */
   @media (max-width: 768px) {
     .tabs {
