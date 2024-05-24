@@ -8,7 +8,7 @@ function Main() {
     const [assembly, setAssembly] = useState([]);
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://script.google.com/macros/s/AKfycbwNk1qiVCgkvBpcs7AucJPmtwaYdliQU0-wjG8qhQwJ0lGkITXE1SzTUfmK_8qzP9mh/exec');  
+            const response = await axios.get(import.meta.env.VITE_SERVER_URL);  
             const data = response.data.data;
             const currentTime = Date.now();
             sessionStorage.setItem('ttl', currentTime); 
