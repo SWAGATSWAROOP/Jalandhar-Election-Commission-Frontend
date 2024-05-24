@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/boothnumber.css';  
+import '../style/boothnumber.css';
 
 function BoothNumber({ assembliesData }) {
     const [partNumber, setPartNumber] = useState("");

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../style/assembly.css';
 
 function Assembly({ assembliesData }) {
-    const [selectedAssembly, setSelectedAssembly] = useState("");
     const [filteredData, setFilteredData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [pageSize, setPageSize] = useState(8); // Default page size
