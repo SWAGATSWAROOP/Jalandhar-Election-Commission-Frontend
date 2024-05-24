@@ -1,8 +1,8 @@
-import '../style/main.css';
-import Assembly from './Assembly';
-import BoothNumber from './BoothNumber';
-import React, {useState, useEffect } from 'react';
-import axios from 'axios';
+import "../style/main.css";
+import Assembly from "./Assembly";
+import BoothNumber from "./BoothNumber";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 function Main() {
     const [part, setPart] = useState(2);
     const [assembly, setAssembly] = useState([]);
