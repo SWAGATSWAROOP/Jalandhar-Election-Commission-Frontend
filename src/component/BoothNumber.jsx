@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../style/boothnumber.css';
-import Table from './Table';
 
 function BoothNumber({ assembliesData }) {
     const [partNumber, setPartNumber] = useState("");

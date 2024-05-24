@@ -1,12 +1,13 @@
 import '../style/navbar.css';
 import Logo from '../images/election-jalandhar-2024.png';
-import { useState } from 'react';
+// import { useState } from 'react';
+
 function Navbar() {
     const currentYear = new Date().getFullYear();
-    const [language, setLanguage] = useState('en');
-    const handleLanguageChange = (event) => {
-        setLanguage(event.target.value);
-    };
+    // const [language, setLanguage] = useState('en');
+    // const handleLanguageChange = (event) => {
+    //     setLanguage(event.target.value);
+    // };
     return (
         <div>
 
