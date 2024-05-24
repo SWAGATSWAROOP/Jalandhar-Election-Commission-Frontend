@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import '../style/boothnumber.css';
-import Table from './Table';
+import '../style/boothnumber.css';  
 
 function BoothNumber({ assembliesData }) {
     const [partNumber, setPartNumber] = useState("");
@@ -56,7 +55,7 @@ function BoothNumber({ assembliesData }) {
                 <button className="submit-button" onClick={()=>handleSubmit()}>Submit</button>
             </div>
             {boothData && (
-                <table>
+                <table className='table-container'>
                     <thead>
                         <tr>
                             <th>Part Number</th>
@@ -71,7 +70,7 @@ function BoothNumber({ assembliesData }) {
                             {/* <td>{data.rush}</td> */}
                             {/* <td>{data.time}</td> */}
                             {/* <td>{data.location}</td> */}
-                            <td><button onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
+                            <td><button  className="location-tab" onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
                         </tr>
                     </tbody>
 

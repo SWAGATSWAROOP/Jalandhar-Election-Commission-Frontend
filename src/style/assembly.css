@@ -41,6 +41,107 @@
     cursor: pointer;
   }
   
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+thead {
+  background-color: #428bca; 
+    font-weight: bold;  
+    color: white;  
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+  .location-tab{
+    padding: 10px;
+    margin: 5px;
+    background-color: #090a0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .location-tab:hover{
+    background-color: #f3f9ff;
+    color: black;
+  }
+  .location-tab:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+  }
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    margin: 0 4px;
+    background-color: #f0f0f0;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .pagination button:hover:not(.active) {
+    background-color: #ddd;
+  }
+  .page-size-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .page-size-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .page-size-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .page-size-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
   /* Responsive design for mobile users */
   @media (max-width: 768px) {
     .tabs {
