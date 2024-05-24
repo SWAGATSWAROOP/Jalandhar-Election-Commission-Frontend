@@ -45,13 +45,15 @@
   .submit-button:hover{
     background-color: #257b39;
   } 
-td:nth-child(3), th:nth-child(3) {
+td:nth-child(2), th:nth-child(2) {
   background-color: #dff0d8;
   color: #3c763d;
 }
   .table-container {
     width: 100%;
     overflow-x: auto;
+    display:flexbox;
+    text-align: center;
 }
 
 table {

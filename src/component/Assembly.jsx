@@ -4,7 +4,7 @@ import '../style/assembly.css';
 function Assembly({ assembliesData }) {
     const [filteredData, setFilteredData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(8); // Default page size
+    const [pageSize, setPageSize] = useState(25); // Default page size
 
     const assemblies = [
         { id: 30, name: "Phillaur/ਫਿਲੌਰ" },
@@ -59,7 +59,7 @@ function Assembly({ assembliesData }) {
         <>
             <div className="form-container">
                 <select className="dropdown">
-                    <option value="">Select your Assembly/Constituency</option>
+                    <option value="">Select Assembly Constituency/ਵਿਧਾਨ ਸਭਾ ਹਲਕਾ ਚੁਣੋ</option>
                     {assemblies.map(assembly => (
                         <option key={assembly.id} value={assembly.name}>
                             {assembly.id} - {assembly.name}
@@ -74,7 +74,9 @@ function Assembly({ assembliesData }) {
                         <thead>
                             <tr>
                                 <th>Part Number</th>
-                                <th>Assembly/Constituency</th>
+                                {/* <th>Assembly/Constituency</th> */}
+                                <th>Rush</th>
+                                <th>Last Update</th>
                                 <th>Location</th>
                             </tr>
                         </thead>
@@ -82,7 +84,9 @@ function Assembly({ assembliesData }) {
                             {currentItems.map((data, index) => (
                                 <tr key={index}>
                                     <td>{data.boothid}</td>
-                                    <td>{data.location}</td>
+                                    {/* <td>{data.location}</td> */}
+                                    <td>-</td>
+                                    <td>-</td>
                                     <td><button className="location-tab" onClick={() => window.open(`${data.url}`, '_blank')}>Click here</button></td>
                                 </tr>
                             ))}

@@ -3,7 +3,7 @@ function Footer(){
     return(
         <>
         <div className = "footer">
-         <h2> &copy; National Institute of Technology,Jalandhar</h2>
+         <h2> <strong> &copy; National Institute of Technology, Jalandhar</strong></h2>
         </div>
         </>
     )

@@ -19,16 +19,15 @@ function BoothNumber({ assembliesData }) {
 
     const handleSubmit = () => {
         const selectedName = document.querySelector(".dropdown").value;
-        if (selectedName && partNumber) {
-            console.log("Selected Assembly : ", selectedName);
-            console.log("Booth number :", partNumber);
+        if (selectedName && partNumber) { 
             const assembly = assembliesData.filter(place => place.location === selectedName).find(place => place.boothid == partNumber);
 
             if (assembly) {
                 console.log(assembly);
                 setBoothData(assembly);
-            } else {
-                console.log("Booth data is null");
+            } else { 
+                alert('Please Enter the valid Part Number');
+                setPartNumber("");
                 setBoothData(null);
             }
         }
@@ -38,7 +37,7 @@ function BoothNumber({ assembliesData }) {
         <>
             <div className="form-container">
                 <select className="dropdown">
-                    <option value="">Select your Assembly/Constituency</option>
+                    <option value="">Select Assembly Constituency /ਵਿਧਾਨ ਸਭਾ ਹਲਕਾ ਚੁਣੋ</option>
                     {assemblies.map(assembly => (
                         <option key={assembly.id} value={assembly.name}>
                             {assembly.id} - {assembly.name}
@@ -48,7 +47,7 @@ function BoothNumber({ assembliesData }) {
                 <input
                     className="dropdown"
                     type="number"
-                    placeholder="Enter your Part Number"
+                    placeholder="Enter your Part Number/ਆਪਣਾ ਭਾਗ ਨੰਬਰ ਦਰਜ ਕਰੋ"
                     value={partNumber}
                     onChange={(e) => setPartNumber(e.target.value)}
                 />
@@ -58,18 +57,19 @@ function BoothNumber({ assembliesData }) {
                 <table className='table-container'>
                     <thead>
                         <tr>
-                            <th>Part Number</th>
-                            <th>Assembly/Constituency</th>
-                            <th>Location</th>
+                            <th>Part Number/ਭਾਗ ਨੰਬਰ</th>
+                                {/* <th>Assembly/Constituency</th> */}
+                                <th>Rush/ਭੀੜ</th>
+                                <th>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</th>
+                                <th>Location/ਟਿਕਾਣਾ</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>{boothData.boothid}</td>
-                            <td>{boothData.location}</td>
-                            {/* <td>{data.rush}</td> */}
-                            {/* <td>{data.time}</td> */}
-                            {/* <td>{data.location}</td> */}
+                            {/* <td>{boothData.location}</td> */}
+                            <td>-</td>
+                            <td>-</td> 
                             <td><button  className="location-tab" onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
                         </tr>
                     </tbody>

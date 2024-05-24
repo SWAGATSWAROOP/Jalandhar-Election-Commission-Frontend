@@ -4,7 +4,7 @@ import BoothNumber from './BoothNumber';
 import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 function Main() {
-    const [part, setPart] = useState(1);
+    const [part, setPart] = useState(2);
     const [assembly, setAssembly] = useState([]);
     const fetchData = async () => {
         try {
@@ -37,9 +37,9 @@ function Main() {
         <>
             <div className="assembly-container">
                 <div className="tabs">
-                    <button className="tab" onClick = {() => setPart(1)}>By Assembly/ Constituencies (General)</button>
+                    <button className="tab" onClick = {() => setPart(1)}>By Assembly Constituencies Name <br /> ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਦੇ ਨਾਮ ਦੁਆਰਾ</button>
                     {/* <button className="tab" onClick = {() => setPart(2)}>By Assembly/ Constituencies & Polling Station Details</button> */}
-                    <button className="tab" onClick = {() => setPart(2)}>By Assembly/ Constituencies & Polling Station Number</button>
+                    <button className="tab" onClick = {() => setPart(2)}>By Assembly Constituencies & Polling Station Number <br />ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ ਨੰਬਰ ਦੁਆਰਾ</button>
                 </div>
                 <div className="form-container">
                     {part == 1 && <Assembly assembliesData = {assembly}/>}
