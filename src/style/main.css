@@ -20,7 +20,20 @@
     border: none;
     cursor: pointer;
   }
-  
+  .tab:hover{
+    background-color: #0564cb;
+  }
+  .tab1 {
+    padding: 10px;
+    margin: 5px;
+    background-color: #E2330D;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .tab1:hover{
+    background-color: #b52c0e;
+  }
   .form-container {
     display: flex;
     flex-direction: column;

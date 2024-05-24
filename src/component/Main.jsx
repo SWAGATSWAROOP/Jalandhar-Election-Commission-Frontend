@@ -39,7 +39,7 @@ function Main() {
                 <div className="tabs">
                     <button className="tab" onClick = {() => setPart(1)}>By Assembly Constituencies Name <br /> ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਦੇ ਨਾਮ ਦੁਆਰਾ</button>
                     {/* <button className="tab" onClick = {() => setPart(2)}>By Assembly/ Constituencies & Polling Station Details</button> */}
-                    <button className="tab" onClick = {() => setPart(2)}>By Assembly Constituencies & Polling Station Number <br />ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ ਨੰਬਰ ਦੁਆਰਾ</button>
+                    <button className="tab1" onClick = {() => setPart(2)}>By Assembly Constituencies & Polling Station Number <br />ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ ਨੰਬਰ ਦੁਆਰਾ</button>
                 </div>
                 <div className="form-container">
                     {part == 1 && <Assembly assembliesData = {assembly}/>}
