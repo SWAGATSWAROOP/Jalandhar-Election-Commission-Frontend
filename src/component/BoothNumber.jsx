@@ -68,8 +68,8 @@ function BoothNumber({ assembliesData }) {
                         <tr>
                             <td>{boothData.boothid}</td>
                             {/* <td>{boothData.location}</td> */}
-                            <td>-</td>
-                            <td>-</td> 
+                            <td>{boothData.rush}</td>
+                            <td>{boothData.time}</td> 
                             <td><button  className="location-tab" onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
                         </tr>
                     </tbody>
