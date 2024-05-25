@@ -29,13 +29,6 @@ function Assembly({ assembliesData }) {
     }
   };
 
-  const handlePageSizeChange = (e) => {
-    const newSize = parseInt(e.target.value);
-    if (!isNaN(newSize)) {
-      setPageSize(newSize);
-    }
-  };
-
   const totalPages = Math.ceil(filteredData.length / pageSize);
   const indexOfLastItem = currentPage * pageSize;
   const indexOfFirstItem = indexOfLastItem - pageSize;
