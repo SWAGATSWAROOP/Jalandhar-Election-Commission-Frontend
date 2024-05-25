@@ -26,14 +26,14 @@ function Navbar() {
         <div className="col-6">
           <h1 style={{ fontSize: "24px" }}>
             {" "}
-            <strong>District Election Office - Jalandhar</strong>{" "}
+            <strong>District Election Office Jalandhar</strong>{" "}
           </h1>
-
+          <h2 style = {{fontSize : "18px", fontWeight : "bold"}}>Presents</h2>
           <h1 style={{ fontSize: "20px", fontWeight: "bold" }}>
-            ELECTION {currentYear}
+            LOK SABHA ELECTION {currentYear}
           </h1>
           <h1 style={{ fontSize: "24px" }}>
-            <strong>VOTER in Queue</strong>
+            <strong>Voter-in-Queue Information</strong>
           </h1>
           {/* <div className="language-bar">
                         <label htmlFor="language">Choose a language: </label>
@@ -49,9 +49,9 @@ function Navbar() {
       </div>
       <div className="intro">
         <h1 style={{ fontSize: "18px", fontWeight: "bold" }}>
-          Know Polling Queue Estimates, Cast Your Vote!
+          Plan Ahead and Cast Your Vote!
           <br />
-          ਪੋਲਿੰਗ ਕਤਾਰ ਦੇ ਅਨੁਮਾਨਾਂ ਨੂੰ ਜਾਣੋ, ਆਪਣੀ ਵੋਟ ਪਾਓ!
+          ਅੱਗੇ ਦੀ ਯੋਜਨਾ ਬਣਾਓ ਅਤੇ ਆਪਣੀ ਵੋਟ ਦਿਓ!
         </h1>
         {/* <a style = {{textDecoration: 'underline', fontWeight : 'bold', color : 'blueviolet'}}href="https://www.google.com/maps">Click here to know about VOTER-IN-QUEUE information.</a> */}
         <button
@@ -60,9 +60,9 @@ function Navbar() {
             window.open("https://electoralsearch.eci.gov.in/", "_blank")
           }
         >
-          Know your Constituency and Part Number(Part Serial Number)
+          Know your Constituency and Part Number
           <br />
-          ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ (ਪਾਰਟ ਸੀਰੀਅਲ ਨੰਬਰ) ਜਾਣੋ
+          ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਾਣੋ
         </button>
       </div>
     </div>

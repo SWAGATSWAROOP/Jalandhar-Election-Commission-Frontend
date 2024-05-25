@@ -72,35 +72,27 @@ function Assembly({ assembliesData }) {
           <table className="table-container">
             <thead>
               <tr>
-                <th>Part Number/ਭਾਗ ਨੰਬਰ</th>
-                {/* <th>Assembly/Constituency</th> */}
-                <th>
-                  <div>Rush/ਭੀੜ</div>
-                  <div>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</div>
+                <th>Part Name/ਭਾਗ ਨਾਮ
                 </th>
-                <th>Location Name/ਟਿਕਾਣਾ ਦਾ ਨਾਮ</th>
+                {/* <th>Assembly/Constituency</th> */}
+                <th>Rush/ਭੀੜ </th>
+                <th>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</th>
                 <th>Location/ਟਿਕਾਣਾ</th>
               </tr>
             </thead>
             <tbody>
               {currentItems.map((data, index) => (
                 <tr key={index}>
-                  <td>{data.boothid}</td>
+                  <td>
+                  <div style={{ textAlign: 'center' }}>
+                      <div>{data.boothid} - {data.partname}</div>
+                      <hr />
+                      <div>{data.boothid} - {data.partnamepb}</div>
+                    </div>
+                  </td>
                   {/* <td>{data.location}</td> */}
-                  <td>
-                    <div style={{ textAlign: 'center' }}>
-                      <div>{data.rush}</div>
-                      <hr />
-                      <div>{data.time}</div>
-                    </div>
-                  </td>
-                  <td>
-                    <div style={{ textAlign: 'center' }}>
-                      <div>{data.partname}</div>
-                      <hr />
-                      <div>{data.partnamepb}</div>
-                    </div>
-                  </td>
+                  <td>{data.rush}</td>
+                  <td>{data.time}</td>
                   <td>
                     <button
                       className="location-tab"

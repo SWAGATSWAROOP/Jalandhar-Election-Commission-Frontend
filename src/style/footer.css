@@ -1,3 +1,12 @@
+.note{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: azure;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0px;
+}
 .footer {
     height: 50px; 
     display: flex;
