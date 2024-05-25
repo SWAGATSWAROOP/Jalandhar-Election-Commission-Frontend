@@ -19,13 +19,12 @@ function BoothNumber({ assembliesData }) {
 
     const handleSubmit = () => {
         const selectedName = document.querySelector(".dropdown").value;
-        if (selectedName && partNumber) { 
+        if (selectedName && partNumber) {
             const assembly = assembliesData.filter(place => place.location === selectedName).find(place => place.boothid == partNumber);
 
-            if (assembly) {
-                console.log(assembly);
+            if (assembly) { 
                 setBoothData(assembly);
-            } else { 
+            } else {
                 alert('Please Enter the valid Part Number');
                 setPartNumber("");
                 setBoothData(null);
@@ -51,30 +50,45 @@ function BoothNumber({ assembliesData }) {
                     value={partNumber}
                     onChange={(e) => setPartNumber(e.target.value)}
                 />
-                <button className="submit-button" onClick={()=>handleSubmit()}>Submit</button>
+                <button className="submit-button" onClick={() => handleSubmit()}>Submit</button>
             </div>
             {boothData && (
-                <table className='table-container'>
-                    <thead>
-                        <tr>
-                            <th>Part Number/ਭਾਗ ਨੰਬਰ</th>
-                                {/* <th>Assembly/Constituency</th> */}
-                                <th>Rush/ਭੀੜ</th>
-                                <th>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</th>
-                                <th>Location/ਟਿਕਾਣਾ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{boothData.boothid}</td>
-                            {/* <td>{boothData.location}</td> */}
-                            <td>{boothData.rush}</td>
-                            <td>{boothData.time}</td> 
-                            <td><button  className="location-tab" onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
-                        </tr>
-                    </tbody>
-
-                </table>)}
+               <table className='table-container'>
+               <thead>
+                   <tr>
+                       <th>Part Number/ਭਾਗ ਨੰਬਰ</th>
+                       {/* <th>Assembly/Constituency</th> */}
+                       <th>
+                           <div>Rush/ਭੀੜ</div>
+                           <div>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</div>
+                       </th>
+                       <th>Location Name/ਟਿਕਾਣਾ ਦਾ ਨਾਮ</th>
+                       <th>Location/ਟਿਕਾਣਾ</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>{boothData.boothid}</td>
+                       {/* <td>{boothData.location}</td> */}
+                       <td>
+                           <div style={{textAlign: 'center'}}>
+                               <div>{boothData.rush}</div>
+                               <hr />
+                               <div>{boothData.time}</div>
+                           </div>
+                       </td>
+                       <td>
+                           <div style={{textAlign: 'center'}}>
+                               <div>{boothData.partname}</div>
+                               <hr />
+                               <div>{boothData.partnamepb}</div>
+                           </div>
+                       </td>
+                       <td><button className="location-tab" onClick={() => window.open(`${boothData.url}`, '_blank')}>Click here</button></td>
+                   </tr>
+               </tbody>
+           </table>
+           )}
         </>
     );
 }

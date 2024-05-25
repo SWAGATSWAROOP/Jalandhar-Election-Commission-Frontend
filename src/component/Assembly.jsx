@@ -79,11 +79,14 @@ function Assembly({ assembliesData }) {
           <table className="table-container">
             <thead>
               <tr>
-                <th>Part Number</th>
+                <th>Part Number/ਭਾਗ ਨੰਬਰ</th>
                 {/* <th>Assembly/Constituency</th> */}
-                <th>Rush</th>
-                <th>Last Update</th>
-                <th>Location</th>
+                <th>
+                  <div>Rush/ਭੀੜ</div>
+                  <div>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ</div>
+                </th>
+                <th>Location Name/ਟਿਕਾਣਾ ਦਾ ਨਾਮ</th>
+                <th>Location/ਟਿਕਾਣਾ</th>
               </tr>
             </thead>
             <tbody>
@@ -91,8 +94,20 @@ function Assembly({ assembliesData }) {
                 <tr key={index}>
                   <td>{data.boothid}</td>
                   {/* <td>{data.location}</td> */}
-                  <td>{data.rush}</td>
-                  <td>{data.time}</td>
+                  <td>
+                    <div style={{ textAlign: 'center' }}>
+                      <div>{data.rush}</div>
+                      <hr />
+                      <div>{data.time}</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div style={{ textAlign: 'center' }}>
+                      <div>{data.partname}</div>
+                      <hr />
+                      <div>{data.partnamepb}</div>
+                    </div>
+                  </td>
                   <td>
                     <button
                       className="location-tab"
