@@ -11,7 +11,7 @@ function Footer() {
         
         <h2>
           {" "}
-          <strong> &copy; National Institute of Technology, Jalandhar</strong>
+          <strong> &copy; Department of Computer Science and Engineering, National Institute of Technology, Jalandhar</strong>
         </h2>
       </div>
     </>
