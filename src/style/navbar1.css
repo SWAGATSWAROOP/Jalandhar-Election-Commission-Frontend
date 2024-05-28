@@ -28,13 +28,12 @@
 
 .logo {
     padding: 20px;
-
     height: 10em;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 .logo-text {
-    font-size: 2.0em;
+    font-size: 2em;
     color: #fff;
     font-weight: bold; 
 }
@@ -287,18 +286,31 @@ button:hover {
     .location-tab {
         padding: 8px;
         margin: 2px;
-    }
-    .logo-container{
-       left : 10px; 
-    }
+    } 
     .logo{
         height : 8em;
     }
     .logo-text{
-        font-size: 1.5em;
+        font-size: 1.4em;
+        text-align: center;
     }
 }
 
+@media screen and (max-width: 480px) {
+    .logo-text{
+        font-size: 1.0em;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 380px) {
+    .logo{
+        height : 6em;
+    }
+    .logo-text{
+        font-size: 0.7em;
+        text-align: center;
+    }
+}
 /* Align nested divs properly */
 td div {
     display: flex;
@@ -324,12 +336,7 @@ td div {
 
     .apply-button .arrow {
         font-size: 1.2em;
-    }
-
-    .need-help {
-        font-size: 0.9em;
-        padding: 8px 16px;
-    }
+    } 
 }
 
 @media (max-width: 480px) {
@@ -349,9 +356,5 @@ td div {
     .apply-button .arrow {
         font-size: 1em;
     }
-
-    .need-help {
-        font-size: 0.8em;
-        padding: 6px 12px;
-    }
+ 
 }

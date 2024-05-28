@@ -106,14 +106,22 @@ function Navbar1() {
         <div className="hero-container">
             <div className="logo-container">
                 <img src={logo} alt="Voter ID Online" className="logo" />
-                <div className="logo-text">District Election Office - Jalandhar</div>
+                <div>
+
+                <div className="logo-text">District Election Office Jalandhar</div>
+                <div className="logo-text">LOK SABHA ELECTION</div>
+                </div>
             </div>
             <div className="overlay"></div>
             <div className="content">
-                <h1>VOTER in Queue</h1>
-                <p>Know Polling Queue Estimates, Cast your Vote!</p>
+                <h1>Voter-in-Queue Information</h1>
+                <p>Plan Ahead and Cast Your Vote!
+                <br />
+                ਅੱਗੇ ਦੀ ਯੋਜਨਾ ਬਣਾਓ ਅਤੇ ਆਪਣੀ ਵੋਟ ਦਿਓ!</p>
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
                     Know your Constituency and Part Number
+                    <br />
+          ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਾਣੋ
                     <span className="arrow">→</span>
                 </button>
             </div>
