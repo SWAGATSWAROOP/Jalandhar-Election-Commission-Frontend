@@ -1,6 +1,6 @@
 import "../style/navbar1.css";
 import logo from "../images/election-jalandhar-2024.png";
-import NITJlogo from "../images/logo_250.png.png";
+import logo2 from "../images/logo2.png";
 import { useEffect, useState, useRef } from 'react';
 import axios from "axios";
 function Navbar1() { 
@@ -118,24 +118,24 @@ function Navbar1() {
                 <div className="logo-text">District Election Office Jalandhar</div>
                 <div className="logo-text">LOK SABHA ELECTION</div>
                 </div>
-                {/* <img src={NITJlogo} alt="NITJ Logo" className="logo" /> */}
+                <img src={logo2} alt="Vote Logo" className="logo" />
             </div>
             <div className="overlay"></div>
             <div className="content">
                 <h1>Voter-in-Queue Information</h1>
-                <p>Plan Ahead and Cast Your Vote!
+                <p>SKIP THE RUSH!
                 <br />
-                ਅੱਗੇ ਦੀ ਯੋਜਨਾ ਬਣਾਓ ਅਤੇ ਆਪਣੀ ਵੋਟ ਦਿਓ!</p>
+                ਰਸ਼ ਛੱਡੋ!</p>
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
-                    Know your Constituency and Part Number
+                    Know your Constituency and Booth Number
                     <br />
-                    ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਾਣੋ
+                    ਆਪਣਾ ਚੋਣ ਖੇਤਰ ਅਤੇ ਬੂਥ ਨੰਬਰ ਜਾਣੋ
                     <span className="arrow">→</span>
                 </button>
                 <button className="apply-button" onClick={scrollToBottom}>
-                    By Assembly Constituencies & Polling Station Number
+                    By Assembly Constituencies & Booth Number
                     <br />
-                    ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ ਨੰਬਰ ਦੁਆਰਾ
+                    ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਬੂਥ ਨੰਬਰ ਦੁਆਰਾ
                     <span className="arrow">↓</span>
                 </button>
             </div>
@@ -152,7 +152,7 @@ function Navbar1() {
                 <input
                     className="dropdown"
                     type="number"
-                    placeholder="Enter your Part Name/ਆਪਣਾ ਭਾਗ ਨਾਮ ਦਰਜ ਕਰੋ"
+                    placeholder="Enter your Booth Name/ਆਪਣੇ ਬੂਥ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ"
                     value={partName}
                     onChange={(e) => {setPartName(e.target.value)}}
                 />
@@ -161,11 +161,12 @@ function Navbar1() {
                 <table className='table-container'>
                     <thead>
                     <tr>
-                       <th>Part Name/ਭਾਗ ਨਾਮ </th>
+                       <th>Booth Name/ਭਾਗ ਨਾਮ </th>
                        {/* <th>Assembly/Constituency</th> */}
-                       <th>Rush/ਭੀੜ 
+                       <th>Rush/ ਭੀੜ 
                        </th>
-                       <th>Last Update/ਆਖਰੀ ਤਬਦੀਲੀ
+                       <th>Last Update/
+                        <br />ਆਖਰੀ ਤਬਦੀਲੀ
                         </th>
                        <th>Location/ਟਿਕਾਣਾ</th>
                    </tr>
