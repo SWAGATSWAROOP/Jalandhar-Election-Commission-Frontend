@@ -123,9 +123,7 @@ function Navbar1() {
             <div className="overlay"></div>
             <div className="content">
                 <h1>Voter-in-Queue Information</h1>
-                <p>SKIP THE RUSH!
-                <br />
-                ਰਸ਼ ਛੱਡੋ!</p>
+                <p>SKIP THE RUSH! </p>
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
                     Know your Constituency and Booth Number
                     <br />

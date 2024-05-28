@@ -20,6 +20,7 @@
     align-items: center; 
     position: absolute; 
     max-width: 100%;
+    padding : 5px 3px 5px 3px;
     left :0px;
     top : 0px;
     width: 100%; 
@@ -248,11 +249,11 @@ button:hover {
 @media screen and (max-width: 800px) {
     
     .logo{
-        height : 8em;
+        height : 7.5em;
         padding-left: 5px;
     }
     .logo-text{    
-        font-size: 1.7em;
+        font-size: 1.6em;
         text-align: center;
     }
 }
@@ -283,7 +284,7 @@ button:hover {
 }
 @media screen and (max-width: 560px) {
     .logo{
-        height : 6em;
+        height : 5em;
         padding-left: 10px;
     }
     .logo-text{
@@ -295,19 +296,19 @@ button:hover {
 }
 @media screen and (max-width: 510px) {
     .logo{
-        height : 5em;
+        height : 4.0em;
         padding-left: 2px;
     }
     .logo-text{
-        font-size: 1.0em;
+        font-size: 0.85em;
         text-align: center;
         padding-top: 5px;
         padding-bottom: 0px;
     } 
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 385px) {
     .logo{
-        height : 5em;
+        height : 4em;
     }
     .logo-text{
         font-size: 0.7em;
@@ -323,7 +324,6 @@ td div {
     align-items: center;
     justify-content: center;
 }
-
 /* Responsive design for mobile users */
 @media (max-width: 768px) {
     table {
@@ -368,5 +368,41 @@ td div {
 
     .apply-button .arrow {
         font-size: 1.5em;
+    }
+}
+@media (max-width: 375px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .apply-button {
+        font-size: 0.8em; 
+        padding: 0px 0px 0px 5px;
+    }
+
+    .apply-button .arrow {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 305px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .apply-button {
+        font-size: 0.8em; 
+        padding: 0px 0px 0px 5px;
+    }
+
+    .apply-button .arrow {
+        font-size: 3em;
     }
 }
