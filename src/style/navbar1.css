@@ -136,23 +136,7 @@
     align-items: center;
   }
   
-  .tabs {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
   
-  .tab {
-    padding: 10px;
-    margin: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-.tab:hover{
-    background-color: #0564cb;
-}
   .form-container {
     padding : 20px;
     display: flex;
@@ -165,22 +149,6 @@
     margin: 10px 0;
     border: 1px solid black;
   }
-  
-  .submit-button {
-    padding: 10px;
-    background-color: #38D2D2;
-    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
-    border-radius: 14px;
-    font-weight: bold;
-    
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .submit-button:hover{
-    background-color: rgb(52, 165, 141);
-  } 
   .table-container {
     width: 100%;
     padding: 10px;
@@ -198,7 +166,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
+    margin: 0 0;
     font-size: 18px;
     text-align: left;
 }
@@ -335,7 +303,7 @@ button:hover {
         text-align: center;
         padding-top: 5px;
         padding-bottom: 0px;
-    }
+    } 
 }
 @media screen and (max-width: 380px) {
     .logo{
@@ -358,6 +326,15 @@ td div {
 
 /* Responsive design for mobile users */
 @media (max-width: 768px) {
+    table {
+        width: 80%;
+    }
+    
+    th, td {
+        font-size: 14px;
+        padding: 4px 4px;
+    }
+
     .content h1 {
         font-size: 2.5em;
     }
@@ -386,6 +363,7 @@ td div {
 
     .apply-button {
         font-size: 0.9em; 
+        padding: 0px 0px 0px 5px;
     }
 
     .apply-button .arrow {
