@@ -1,6 +1,7 @@
 import "../style/navbar1.css";
 import logo from "../images/election-jalandhar-2024.png";
-import { useEffect, useState } from 'react';
+import NITJlogo from "../images/logo_250.png.png";
+import { useEffect, useState, useRef } from 'react';
 import axios from "axios";
 function Navbar1() { 
     const [partName, setPartName] = useState("");
@@ -52,11 +53,11 @@ function Navbar1() {
             sessionStorage.setItem('ttl', currentTime);
             sessionStorage.setItem('assemblyData', JSON.stringify(data));
             setAssemblyData(data);
-            
         } catch (error) {
             console.error('Error fetching data:', error);
         }
     };
+
     useEffect(() => {
         const storedTime = sessionStorage.getItem('ttl');
         const nowTime = Date.now();
@@ -77,9 +78,11 @@ function Navbar1() {
                 data = data.filter(place => place.boothid == partName);
             }
             setFilteredData(data);
+            setCurrentPage(1);
         }else{
             setFilteredData(assemblyData);
         }
+        setCurrentPage(1);
     }, [selectedAssembly, partName, assemblyData]);
 
     useEffect(() => {
@@ -99,7 +102,11 @@ function Navbar1() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
+    const bottomDivRef = useRef(null);
+
+    const scrollToBottom = () => {
+      bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <>
@@ -111,6 +118,7 @@ function Navbar1() {
                 <div className="logo-text">District Election Office Jalandhar</div>
                 <div className="logo-text">LOK SABHA ELECTION</div>
                 </div>
+                {/* <img src={NITJlogo} alt="NITJ Logo" className="logo" /> */}
             </div>
             <div className="overlay"></div>
             <div className="content">
@@ -121,12 +129,18 @@ function Navbar1() {
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
                     Know your Constituency and Part Number
                     <br />
-          ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਾਣੋ
+                    ਆਪਣੇ ਚੋਣ ਖੇਤਰ ਅਤੇ ਭਾਗ ਨੰਬਰ ਜਾਣੋ
                     <span className="arrow">→</span>
+                </button>
+                <button className="apply-button" onClick={scrollToBottom}>
+                    By Assembly Constituencies & Polling Station Number
+                    <br />
+                    ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਪੋਲਿੰਗ ਸਟੇਸ਼ਨ ਨੰਬਰ ਦੁਆਰਾ
+                    <span className="arrow">↓</span>
                 </button>
             </div>
             </div>
-            <div className="form-container">
+            <div className="form-container" id="bottomDiv" ref={bottomDivRef}>
                 <select className="dropdown" value={selectedAssembly} onChange={handleAssemblyChange}>
                     <option value="">Select Assembly Constituency /ਵਿਧਾਨ ਸਭਾ ਹਲਕਾ ਚੁਣੋ</option>
                     {assemblies.map(assembly => (
