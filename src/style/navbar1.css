@@ -1,0 +1,357 @@
+/* Container styling */
+.hero-container {
+    display: flex;
+    flex-direction: column; /* Setting flex-direction to column */
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../images/background-image.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    align-items: center; 
+    position: absolute; 
+    max-width: 100%;
+    left :0px;
+    top : 0px;
+    width: 100%; 
+    z-index: 2;
+    background-color: #535252;
+}
+
+.logo {
+    padding: 20px;
+
+    height: 10em;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 2.0em;
+    color: #fff;
+    font-weight: bold; 
+}
+
+/* Overlay for darkening the background */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Content styling */
+.content {
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
+    transform: translateY(0px);
+    transition: transform 0.1s linear;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.apply-button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 0px 0px 0px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button .arrow {
+    margin-left: 10px;
+    font-size: 1.5em;
+    color:#ffffff;
+    background-color: #ffdd57;
+    padding: 10px 10px 10px 10px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.apply-button:hover {
+    background-color: #e0e0e0;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination button:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
+.assembly-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .tab {
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+.tab:hover{
+    background-color: #0564cb;
+}
+  .form-container {
+    padding : 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dropdown {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid black;
+  }
+  
+  .submit-button {
+    padding: 10px;background-color: #38D2D2;
+    background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+    border-radius: 14px;
+    font-weight: bold;
+    
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .submit-button:hover{
+    background-color: rgb(52, 165, 141);
+  } 
+  .table-container {
+    width: 100%;
+    padding: 10px;
+    overflow-x: auto;
+    display: flexbox;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+/*     
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+thead {
+    background-color: #252020;
+    font-weight: bold;  /* Make the header text bold */
+    color: white;
+}
+
+td:nth-child(2), th:nth-child(2) {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.location-tab {
+    padding: 10px;
+    margin: 5px;
+    background-color: #090a0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.location-tab:hover {
+    background-color: #f3f9ff;
+    color: black;
+}
+
+.location-tab:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px #5a01a7;
+}
+
+/* Responsive design for mobile users */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        width: 80%;
+    }
+    
+    th, td {
+        font-size: 14px;
+        padding: 4px 4px;
+    }
+
+    .location-tab {
+        padding: 8px;
+        margin: 2px;
+    }
+    .logo-container{
+       left : 10px; 
+    }
+    .logo{
+        height : 8em;
+    }
+    .logo-text{
+        font-size: 1.5em;
+    }
+}
+
+/* Align nested divs properly */
+td div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive design for mobile users */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2.5em;
+    }
+
+    .content p {
+        font-size: 1.2em;
+    }
+
+    .apply-button {
+        font-size: 1em;
+        padding: 10px 10px;
+    }
+
+    .apply-button .arrow {
+        font-size: 1.2em;
+    }
+
+    .need-help {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .apply-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .apply-button .arrow {
+        font-size: 1em;
+    }
+
+    .need-help {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}

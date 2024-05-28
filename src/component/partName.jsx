@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import '../style/partname.css';
 
 function PartName({ assembliesData }) {
@@ -32,17 +32,17 @@ function PartName({ assembliesData }) {
 
     const handlePartNameChange = (event) => {
         const partName = event.target.value;
-        setPartName(partName);
-        if (selectedAssembly && partName) {
-            const assemblyData = assembliesData.filter(place => 
-                place.location.toLowerCase() === selectedAssembly.toLowerCase() && place.partname.toLowerCase().includes(partName.toLowerCase())
-            );
-            setFilteredData(assemblyData);
-        } else if (selectedAssembly) {
-            const assemblyData = assembliesData.filter(place => place.location.toLowerCase() === selectedAssembly.toLowerCase());
+        setPartName(partName); 
+    };
+    useEffect(() => {
+        if (selectedAssembly) {
+            let assemblyData = assembliesData.filter(place => place.location === selectedAssembly);
+            if (partName) {
+                assemblyData = assemblyData.filter(place => place.boothid.toString().includes(partName));
+            }
             setFilteredData(assemblyData);
         }
-    };
+    }, [selectedAssembly, partName, assembliesData]);
 
     return (
         <>
@@ -57,7 +57,7 @@ function PartName({ assembliesData }) {
                 </select>
                 <input
                     className="dropdown"
-                    type="text"
+                    type="number"
                     placeholder="Enter your Part Name/ਆਪਣਾ ਭਾਗ ਨਾਮ ਦਰਜ ਕਰੋ"
                     value={partName}
                     onChange={handlePartNameChange}

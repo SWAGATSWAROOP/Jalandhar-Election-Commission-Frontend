@@ -1,4 +1,40 @@
 /* Navbar.css */
+.background-image{ 
+  
+  position: relative; /* Required for pseudo-element positioning */
+  width: 100%; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+  overflow: hidden;
+}
+.background-image::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+.container {
+  position: relative; /* Required for pseudo-element positioning */
+  width: 100%; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+  overflow: hidden; /* To ensure content stays within the container */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('your-image.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Adjust based on your needs */
+  background-position: center; 
+}
+
+
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +45,7 @@
   .col-2, .col-6, .col-space {
     box-sizing: border-box;
     text-align: center; 
+    color: white;
   }
 
   .col-2 {
@@ -42,6 +79,9 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    color: white;
+    padding: 20px;
+    padding: 40px;
   }
   
   /* Media query for tablets and desktops */
