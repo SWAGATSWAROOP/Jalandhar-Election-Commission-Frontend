@@ -14,7 +14,7 @@ function Navbar1() {
         { id: 32, name: "Shahkot/ਸ਼ਾਹਕੋਟ" },
         { id: 33, name: "Kartarpur/ਕਰਤਾਰਪੁਰ" },
         { id: 34, name: "Jalandhar West/ਜਲੰਧਰ ਪੱਛਮੀ" },
-        { id: 35, name: "Jalandhar Center/ਜਲੰਧਰ ਕੇਂਦਰ" },
+        { id: 35, name: "Jalandhar Central/ਜਲੰਧਰ ਕੇਂਦਰ" },
         { id: 36, name: "Jalandhar North/ਜਲੰਧਰ ਉੱਤਰੀ" },
         { id: 37, name: "Jalandhar Cantt/ਜਲੰਧਰ ਛਾਉਣੀ" },
         { id: 38, name: "Adampur/ਆਦਮਪੁਰ" }
