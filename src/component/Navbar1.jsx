@@ -116,7 +116,7 @@ function Navbar1() {
                 <div>
 
                 <div className="logo-text">District Election Office Jalandhar</div>
-                <div className="logo-text">LOK SABHA ELECTION</div>
+                <div className="logo-text">LOK SABHA ELECTION 2024</div>
                 </div>
                 <img src={logo2} alt="Vote Logo" className="logo" />
             </div>
@@ -131,7 +131,7 @@ function Navbar1() {
                     <span className="arrow">→</span>
                 </button>
                 <button className="apply-button" onClick={scrollToBottom}>
-                    By Assembly Constituencies and Booth Number
+                    Search by Assembly Constituency and Booth Number
                     <br />
                     ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਬੂਥ ਨੰਬਰ ਦੁਆਰਾ
                     <span className="arrow">↓</span>
