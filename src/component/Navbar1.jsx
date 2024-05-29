@@ -122,19 +122,19 @@ function Navbar1() {
             </div>
             <div className="overlay"></div>
             <div className="content">
-                <h1>Voter-in-Queue Information</h1>
-                <p>SKIP THE RUSH! </p>
+                <h1><strong>Voter-in-Queue Information</strong></h1>
+                <p><strong>SKIP THE RUSH!</strong> </p>
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
-                    Know your Constituency and Booth Number
+                    <div className="text">Know your Constituency and Booth Number
                     <br />
-                    ਆਪਣਾ ਚੋਣ ਖੇਤਰ ਅਤੇ ਬੂਥ ਨੰਬਰ ਜਾਣੋ
-                    <span className="arrow">→</span>
+                    ਆਪਣਾ ਚੋਣ ਖੇਤਰ ਅਤੇ ਬੂਥ ਨੰਬਰ ਜਾਣੋ</div>
+                    <div className="arrow">→</div>
                 </button>
                 <button className="apply-button" onClick={scrollToBottom}>
-                    Search by Assembly Constituency and Booth Number
+                    <div className = "text">Search by Assembly Constituency and Booth Number
                     <br />
-                    ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਬੂਥ ਨੰਬਰ ਦੁਆਰਾ
-                    <span className="arrow">↓</span>
+                    ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਬੂਥ ਨੰਬਰ ਦੁਆਰਾ</div>
+                    <div className="arrow">↓</div>
                 </button>
             </div>
             </div>
