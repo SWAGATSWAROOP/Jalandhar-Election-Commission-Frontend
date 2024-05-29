@@ -131,11 +131,9 @@ function Navbar1() {
                     <span className="arrow">→</span>
                 </button>
                 <button className="apply-button" onClick={scrollToBottom}>
-                    <div className = "text" >
-                    By Assembly Constituencies & Booth Number
+                    By Assembly Constituencies and Booth Number
                     <br />
                     ਵਿਧਾਨ ਸਭਾ ਹਲਕਿਆਂ ਅਤੇ ਬੂਥ ਨੰਬਰ ਦੁਆਰਾ
-                    </div>
                     <span className="arrow">↓</span>
                 </button>
             </div>

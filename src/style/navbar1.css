@@ -349,7 +349,7 @@ td div {
     }
 
     .apply-button .arrow {
-        font-size: 1.5em;
+        font-size: 3em;
     } 
 }
 
@@ -368,7 +368,7 @@ td div {
     }
 
     .apply-button .arrow {
-        font-size: 1.5em;
+        font-size: 3em;
     }
 }
 @media (max-width: 375px) {
@@ -386,7 +386,7 @@ td div {
     }
 
     .apply-button .arrow {
-        font-size: 2.5em;
+        font-size: 3em;
         padding: 5px 0px;
     }
 }
@@ -424,8 +424,7 @@ td div {
     }
 
     .apply-button .arrow {
-        font-size: 4em;
-        
+        font-size: 4em;  
         padding: 5px 0px;
     }
 }
