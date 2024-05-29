@@ -28,10 +28,12 @@ function Navbar1() {
     const prevPage = () => {
         setCurrentPage((prevPage) => prevPage - 1);
     };
+
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
     const handleAssemblyChange = (event) => {
         const selectedName = event.target.value;
         setSelectedAssembly(selectedName);
@@ -61,13 +63,13 @@ function Navbar1() {
     useEffect(() => {
         const storedTime = sessionStorage.getItem('ttl');
         const nowTime = Date.now();
-        if (nowTime - storedTime < 10 * 60 * 1000) {
+        if (nowTime - storedTime < 5 * 60 * 1000) {
             const storedData = sessionStorage.getItem('assemblyData');
             setAssemblyData(JSON.parse(storedData)); 
         } else {
             fetchData();
         }
-        const intervalId = setInterval(fetchData, 10 * 60 * 1000);
+        const intervalId = setInterval(fetchData, 5 * 60 * 1000);
         return () => clearInterval(intervalId);
     }, []);  
 
