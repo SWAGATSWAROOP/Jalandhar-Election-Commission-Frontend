@@ -63,13 +63,13 @@ function Navbar1() {
     useEffect(() => {
         const storedTime = sessionStorage.getItem('ttl');
         const nowTime = Date.now();
-        if (nowTime - storedTime < 5 * 60 * 1000) {
+        if (nowTime - storedTime < 2 * 60 * 1000) {
             const storedData = sessionStorage.getItem('assemblyData');
             setAssemblyData(JSON.parse(storedData)); 
         } else {
             fetchData();
         }
-        const intervalId = setInterval(fetchData, 5 * 60 * 1000);
+        const intervalId = setInterval(fetchData, 2 * 60 * 1000);
         return () => clearInterval(intervalId);
     }, []);  
 
