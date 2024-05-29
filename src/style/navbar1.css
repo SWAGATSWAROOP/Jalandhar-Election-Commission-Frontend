@@ -29,8 +29,8 @@
 }
 
 .logo { 
-    padding-left: 20px;
-    height: 10em;
+    padding-left: 30px;
+    height: 8em;
     margin-right: 0px;
 }
 
@@ -237,8 +237,8 @@ button:hover {
 /* Responsive design for mobile users */
 @media (max-width: 1000px) {
     .logo{
-        height : 8em;
-        padding-left: 5px;
+        height : 6.4em;
+        padding-left: 10px;
     }
     .logo-text{    
         font-size: 1.7em;
@@ -249,8 +249,8 @@ button:hover {
 @media screen and (max-width: 800px) {
     
     .logo{
-        height : 7.5em;
-        padding-left: 5px;
+        height : 6em;
+        padding-left: 10px;
     }
     .logo-text{    
         font-size: 1.6em;
@@ -260,8 +260,8 @@ button:hover {
 @media screen and (max-width: 700px) {
     
     .logo{
-        height : 7em;
-        padding-left: 5px;
+        height : 5.6em;
+        padding-left: 10px;
     }
     .logo-text{
         padding-top: 0%;
@@ -272,7 +272,7 @@ button:hover {
 
 @media screen and (max-width: 600px) {
     .logo{
-        height : 6em;
+        height : 4.8em;
         padding-left: 10px;
     }
     .logo-text{
@@ -284,7 +284,7 @@ button:hover {
 }
 @media screen and (max-width: 560px) {
     .logo{
-        height : 5em;
+        height : 4em;
         padding-left: 10px;
     }
     .logo-text{
@@ -296,8 +296,8 @@ button:hover {
 }
 @media screen and (max-width: 510px) {
     .logo{
-        height : 4.0em;
-        padding-left: 2px;
+        height : 3.2em;
+        padding-left: 5px;
     }
     .logo-text{
         font-size: 0.85em;
@@ -308,7 +308,8 @@ button:hover {
 }
 @media screen and (max-width: 385px) {
     .logo{
-        height : 4em;
+        height : 3.2em;
+        padding-left : 5px;
     }
     .logo-text{
         font-size: 0.7em;
@@ -398,11 +399,29 @@ td div {
     }
 
     .apply-button {
-        font-size: 0.8em; 
+        font-size: 0.7em; 
         padding: 0px 0px 0px 5px;
     }
 
     .apply-button .arrow {
         font-size: 3em;
+    }
+}
+@media (max-width: 228px) {
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .apply-button {
+        font-size: 0.6em; 
+        padding: 0px 0px 0px 5px;
+    }
+
+    .apply-button .arrow {
+        font-size: 4em;
     }
 }
