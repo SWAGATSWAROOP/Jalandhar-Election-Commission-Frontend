@@ -14,7 +14,7 @@ function Navbar1() {
         { id: 32, name: "Shahkot/ਸ਼ਾਹਕੋਟ" },
         { id: 33, name: "Kartarpur/ਕਰਤਾਰਪੁਰ" },
         { id: 34, name: "Jalandhar West/ਜਲੰਧਰ ਪੱਛਮੀ" },
-        { id: 35, name: "Jalandhar Center/ਜਲੰਧਰ ਕੇਂਦਰ" },
+        { id: 35, name: "Jalandhar Central/ਜਲੰਧਰ ਕੇਂਦਰ" },
         { id: 36, name: "Jalandhar North/ਜਲੰਧਰ ਉੱਤਰੀ" },
         { id: 37, name: "Jalandhar Cantt/ਜਲੰਧਰ ਛਾਉਣੀ" },
         { id: 38, name: "Adampur/ਆਦਮਪੁਰ" }
@@ -28,10 +28,12 @@ function Navbar1() {
     const prevPage = () => {
         setCurrentPage((prevPage) => prevPage - 1);
     };
+
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
     const handleAssemblyChange = (event) => {
         const selectedName = event.target.value;
         setSelectedAssembly(selectedName);
@@ -46,9 +48,9 @@ function Navbar1() {
     const fetchData = async () => {
         try {
             const response = await axios.get(import.meta.env.VITE_SERVER_URL);
-            // const data = response.data;
+            const data = response.data;
             // testing 
-            const data = response.data.data;
+            // const data = response.data.data;
             const currentTime = Date.now();
             sessionStorage.setItem('ttl', currentTime);
             sessionStorage.setItem('assemblyData', JSON.stringify(data));
@@ -61,13 +63,13 @@ function Navbar1() {
     useEffect(() => {
         const storedTime = sessionStorage.getItem('ttl');
         const nowTime = Date.now();
-        if (nowTime - storedTime < 10 * 60 * 1000) {
+        if (nowTime - storedTime < 2 * 60 * 1000) {
             const storedData = sessionStorage.getItem('assemblyData');
             setAssemblyData(JSON.parse(storedData)); 
         } else {
             fetchData();
         }
-        const intervalId = setInterval(fetchData, 10 * 60 * 1000);
+        const intervalId = setInterval(fetchData, 2 * 60 * 1000);
         return () => clearInterval(intervalId);
     }, []);  
 
