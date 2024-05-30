@@ -67,7 +67,7 @@ function Navbar1() {
 
         const nowTime = Date.now();
 
-        if (nowTime - storedTime < 3 * 60 * 1000) {
+        if (nowTime - storedTime < 2 * 60 * 1000) {
 
             const storedData = sessionStorage.getItem('assemblyData');
 
@@ -79,9 +79,10 @@ function Navbar1() {
 
         }
 
-        // const intervalId = setInterval(fetchData, 3 * 60 * 1000);
-        // return () => clearInterval(intervalId);
-    },[]);  
+        const intervalId = setInterval(fetchData, 2 * 60 * 1000);
+        return () => clearInterval(intervalId);
+
+    }, []);  
 
 
 
@@ -99,26 +100,28 @@ function Navbar1() {
         setCurrentPage(1);
     }, [selectedAssembly, partName, assemblyData]);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.pageYOffset;
-            const content = document.querySelector('.content');
-            const background = document.querySelector('.hero-container');
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollPosition = window.pageYOffset;
+    //         const content = document.querySelector('.content');
+    //         const background = document.querySelector('.hero-container');
 
-            if (content && background) {
-                content.style.transform = `translateY(${scrollPosition * -2.0}px)`;
-                background.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-            }
-        };
+    //         if (content && background) {
+    //             content.style.transform = `translateY(${scrollPosition * -2.0}px)`;
+    //             background.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    //         }
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
     const bottomDivRef = useRef(null);
 
-    const scrollToBottom = () => bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToBottom = () => {
+      bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <>
@@ -194,6 +197,7 @@ function Navbar1() {
                       <div>{data.boothid} - {data.partnamepb}</div>
                     </div>
                   </td>
+                  {/* <td>{data.location}</td> */}
                   <td>{data.rush}</td>
                   <td>{data.time}</td>
                   <td>
