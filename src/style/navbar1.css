@@ -372,4 +372,57 @@ td div {
     align-items: center;
     justify-content: center;
 }
-/* Responsive design for mobile users */
+/*  footer css */
+.note{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: azure;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0px;
+}
+.footer {
+    height: 50px; 
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(32, 22, 22);
+    color: white; 
+    bottom: 0;
+    left: 0;
+}
+@media (max-width :  768px){
+    .footer{
+        height : 90px;
+    }
+}
+    
+
+/* loader.css */ 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height to center the loader */
+  }
+  
+  .loader-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    animation: zoomInOut 2s infinite alternate; /* Adjust duration and animation as needed */
+    transition: transform 0.5s ease; /* Add smooth transition effect */
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2); /* Adjust zoom level as needed */
+    }
+  }
+  
