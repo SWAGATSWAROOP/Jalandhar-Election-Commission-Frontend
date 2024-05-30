@@ -67,7 +67,7 @@ function Navbar1() {
 
         const nowTime = Date.now();
 
-        if (nowTime - storedTime < 2 * 60 * 1000) {
+        if (nowTime - storedTime < 3 * 60 * 1000) {
 
             const storedData = sessionStorage.getItem('assemblyData');
 
@@ -79,7 +79,7 @@ function Navbar1() {
 
         }
 
-        const intervalId = setInterval(fetchData, 2 * 60 * 1000);
+        const intervalId = setInterval(fetchData, 3 * 60 * 1000);
         return () => clearInterval(intervalId);
 
     }, []);  
