@@ -119,9 +119,7 @@ function Navbar1() {
     }, []);
     const bottomDivRef = useRef(null);
 
-    const scrollToBottom = () => {
-      bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
+    const scrollToBottom = () => bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
 
     return (
         <>
