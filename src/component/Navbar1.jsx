@@ -49,12 +49,12 @@ function Navbar1() {
         try {
             const response = await axios.get(import.meta.env.VITE_SERVER_URL);
             const data = response.data;
+            setAssemblyData(data);
             // testing 
             // const data = response.data.data;
             const currentTime = Date.now();
             sessionStorage.setItem('ttl', currentTime);
             sessionStorage.setItem('assemblyData', JSON.stringify(data));
-            setAssemblyData(data);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
