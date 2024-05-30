@@ -407,14 +407,14 @@ td div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height to center the loader */
+    height: 100vh;
   }
   
   .loader-image {
-    width: 100px; /* Adjust size as needed */
+    width: 100px; 
     height: auto;
-    animation: zoomInOut 2s infinite alternate; /* Adjust duration and animation as needed */
-    transition: transform 0.5s ease; /* Add smooth transition effect */
+    animation: zoomInOut 2s infinite alternate; 
+    transition: transform 0.5s ease; 
   }
   
   @keyframes zoomInOut {
