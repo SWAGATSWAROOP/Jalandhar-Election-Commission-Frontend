@@ -197,7 +197,6 @@ function Navbar1() {
                       <div>{data.boothid} - {data.partnamepb}</div>
                     </div>
                   </td>
-                  {/* <td>{data.location}</td> */}
                   <td>{data.rush}</td>
                   <td>{data.time}</td>
                   <td>
