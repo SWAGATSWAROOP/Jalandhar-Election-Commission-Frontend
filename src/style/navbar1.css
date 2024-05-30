@@ -68,6 +68,7 @@
 .content h1 {
     font-size: 3em;
     margin: 20px 0px;
+    line-height: 1.2;
 }
 
 .content p {
@@ -126,6 +127,13 @@ flex-direction: column;
     }
 }
 @media (max-width: 480px) {
+    table {
+        width: 70%;
+    }
+    th, td {
+        font-size: 12px;
+        padding: 3px 3px;
+    }
     .content h1 {
         font-size: 2em;
     }

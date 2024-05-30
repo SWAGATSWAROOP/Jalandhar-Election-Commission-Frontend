@@ -48,9 +48,9 @@ function Navbar1() {
     const fetchData = async () => {
         try {
             const response = await axios.get(import.meta.env.VITE_SERVER_URL);
-            const data = response.data;
+            // const data = response.data;
             // testing 
-            // const data = response.data.data;
+            const data = response.data.data;
             const currentTime = Date.now();
             sessionStorage.setItem('ttl', currentTime);
             sessionStorage.setItem('assemblyData', JSON.stringify(data));
@@ -60,18 +60,31 @@ function Navbar1() {
         }
     };
 
+
     useEffect(() => {
+
         const storedTime = sessionStorage.getItem('ttl');
+
         const nowTime = Date.now();
+
         if (nowTime - storedTime < 2 * 60 * 1000) {
+
             const storedData = sessionStorage.getItem('assemblyData');
+
             setAssemblyData(JSON.parse(storedData)); 
+
         } else {
+
             fetchData();
+
         }
+
         const intervalId = setInterval(fetchData, 2 * 60 * 1000);
         return () => clearInterval(intervalId);
+
     }, []);  
+
+
 
     useEffect(() => {
         if (selectedAssembly) {
@@ -124,8 +137,8 @@ function Navbar1() {
             </div>
             <div className="overlay"></div>
             <div className="content">
-                <h1><strong>Voter-in-Queue Information</strong></h1>
-                <p><strong>SKIP THE RUSH!</strong> </p>
+                <h1><strong>Voter-in-Queue <span className="no-space"></span>Information</strong></h1>
+                <p style = {{color : '#e8c061'}}><strong>SKIP THE RUSH!</strong> </p>
                 <div className = "apply">
                 <button className="apply-button" onClick={() => window.open("https://electoralsearch.eci.gov.in/", "_blank")}>
                     <div className="text">Know your Constituency and Booth Number
