@@ -49,12 +49,12 @@ function Navbar1() {
         try {
             const response = await axios.get(import.meta.env.VITE_SERVER_URL);
             const data = response.data;
+            setAssemblyData(data);
             // testing 
             // const data = response.data.data;
             const currentTime = Date.now();
             sessionStorage.setItem('ttl', currentTime);
             sessionStorage.setItem('assemblyData', JSON.stringify(data));
-            setAssemblyData(data);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -67,7 +67,7 @@ function Navbar1() {
 
         const nowTime = Date.now();
 
-        if (nowTime - storedTime < 2 * 60 * 1000) {
+        if (nowTime - storedTime < 3 * 60 * 1000) {
 
             const storedData = sessionStorage.getItem('assemblyData');
 
@@ -79,10 +79,9 @@ function Navbar1() {
 
         }
 
-        const intervalId = setInterval(fetchData, 2 * 60 * 1000);
-        return () => clearInterval(intervalId);
-
-    }, []);  
+        // const intervalId = setInterval(fetchData, 3 * 60 * 1000);
+        // return () => clearInterval(intervalId);
+    },[]);  
 
 
 
@@ -119,9 +118,7 @@ function Navbar1() {
     }, []);
     const bottomDivRef = useRef(null);
 
-    const scrollToBottom = () => {
-      bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
-    };
+    const scrollToBottom = () => bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
 
     return (
         <>
@@ -197,7 +194,6 @@ function Navbar1() {
                       <div>{data.boothid} - {data.partnamepb}</div>
                     </div>
                   </td>
-                  {/* <td>{data.location}</td> */}
                   <td>{data.rush}</td>
                   <td>{data.time}</td>
                   <td>
