@@ -79,10 +79,9 @@ function Navbar1() {
 
         }
 
-        const intervalId = setInterval(fetchData, 3 * 60 * 1000);
-        return () => clearInterval(intervalId);
-
-    }, []);  
+        // const intervalId = setInterval(fetchData, 3 * 60 * 1000);
+        // return () => clearInterval(intervalId);
+    },[]);  
 
 
 
