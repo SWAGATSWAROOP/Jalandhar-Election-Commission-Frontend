@@ -81,7 +81,6 @@ function Navbar1() {
 
         const intervalId = setInterval(fetchData, 2 * 60 * 1000);
         return () => clearInterval(intervalId);
-
     }, []);  
 
 
