@@ -187,7 +187,6 @@ function Navbar1() {
               <thead>
                 <tr>
                   <th>Booth Name/ਭਾਗ ਨਾਮ </th>
-                  {/* <th>Assembly/Constituency</th> */}
                   <th>Rush/ ਭੀੜ</th>
                   <th>
                     Last Update/
