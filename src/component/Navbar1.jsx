@@ -106,7 +106,7 @@ function Navbar1() {
     <>
       {isLoading ? (
         <div className="loader-container">
-          <img src={logo} alt="Loading..." className="loader-image" />
+          <img src={logo3} alt="Loading..." className="loader-image" />
           {/* <div className="loader-text">Loading data, please wait...</div> */}
         </div>
       ) : (
