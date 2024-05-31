@@ -1,7 +1,6 @@
 import "../style/navbar1.css";
-import logo from "../images/election-jalandhar-2024.png";
 import logo2 from "../images/NITJ.png";
-import logo3 from "../images/election-jalandhar-2024.png";
+import logo1 from "../images/election-jalandhar-2024.png";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 function Navbar1() {
@@ -106,14 +105,14 @@ function Navbar1() {
     <>
       {isLoading ? (
         <div className="loader-container">
-          <img src={logo} alt="Loading..." className="loader-image" />
+          <img src={logo1} alt="Loading..." className="loader-image" />
           {/* <div className="loader-text">Loading data, please wait...</div> */}
         </div>
       ) : (
         <div>
           <div className="hero-container">
             <div className="logo-container">
-              <img src={logo3} alt="Voter ID Online" className="logo" />
+              <img src={logo1} alt="Voter ID Online" className="logo" />
               <div>
                 <div className="logo-text">
                   District Election Office Jalandhar
