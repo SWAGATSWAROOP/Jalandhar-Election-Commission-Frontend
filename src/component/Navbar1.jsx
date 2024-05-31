@@ -162,7 +162,7 @@ function Navbar1() {
                         <table className='table-container'>
                             <thead>
                                 <tr>
-                                    <th>Booth Name/ਭਾਗ ਨਾਮ </th>
+                                    <th>Booth Name/ਬੂਥ ਨਾਮ </th>
                                     {/* <th>Assembly/Constituency</th> */}
                                     <th>Rush/ ਭੀੜ
                                     </th>
