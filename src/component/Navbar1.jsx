@@ -78,9 +78,6 @@ function Navbar1() {
         return () => clearInterval(intervalId);
     }, []);
 
-
-
-
     useEffect(() => {
         if (selectedAssembly) {
             let data = assemblyData.filter(place => place.location === selectedAssembly);
