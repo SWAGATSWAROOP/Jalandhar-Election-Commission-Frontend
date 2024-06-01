@@ -68,6 +68,7 @@ function Navbar1() {
   function convertTimeTo12HourFormat(time) {
     // Split the time string by colon
     let timeParts = time.split(":");
+    if (timeParts.length !== 3) return time;
 
     // Change the hour from "0" to "12" if it is "0"
     if (timeParts[0] === "0") {
