@@ -65,6 +65,22 @@ function Navbar1() {
     }
   };
 
+  function convertTimeTo12HourFormat(time) {
+    // Split the time string by colon
+    let timeParts = time.split(":");
+    if (timeParts.length !== 3) return time;
+
+    // Change the hour from "0" to "12" if it is "0"
+    if (timeParts[0] === "0") {
+      timeParts[0] = "12";
+    }
+
+    // Join the time parts back together
+    let newTime = timeParts.join(":");
+
+    return newTime;
+  }
+
   useEffect(() => {
     const storedTime = sessionStorage.getItem("ttl");
     const nowTime = Date.now();
@@ -211,7 +227,7 @@ function Navbar1() {
                     </td>
                     {/* <td>{data.location}</td> */}
                     <td>{data.rush}</td>
-                    <td>{data.time}</td>
+                    <td>{convertTimeTo12HourFormat(data.time)}</td>
                     <td>
                       <button
                         className="location-tab"
