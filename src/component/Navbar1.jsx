@@ -227,7 +227,7 @@ function Navbar1() {
                     </td>
                     {/* <td>{data.location}</td> */}
                     <td>{data.rush}</td>
-                    <td>{convertTimeTo12HourFormat(data.time)}</td>
+                    <td>{data.time}</td>
                     <td>
                       <button
                         className="location-tab"
