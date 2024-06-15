@@ -3,6 +3,7 @@ import logo2 from "../images/NITJ.png";
 import logo1 from "../images/election-jalandhar-2024.png";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+
 function Navbar1() {
   const [partName, setPartName] = useState("");
   const [selectedAssembly, setSelectedAssembly] = useState("");
@@ -65,21 +66,21 @@ function Navbar1() {
     }
   };
 
-  // function convertTimeTo12HourFormat(time) {
-  //   // Split the time string by colon
-  //   let timeParts = time.split(":");
-  //   if (timeParts.length !== 3) return time;
+  function convertTimeTo12HourFormat(time) {
+    // Split the time string by colon
+    let timeParts = time.split(":");
+    if (timeParts.length !== 3) return time;
 
-  //   // Change the hour from "0" to "12" if it is "0"
-  //   if (timeParts[0] === "0") {
-  //     timeParts[0] = "12";
-  //   }
+    // Change the hour from "0" to "12" if it is "0"
+    if (timeParts[0] === "0") {
+      timeParts[0] = "12";
+    }
 
-  //   // Join the time parts back together
-  //   let newTime = timeParts.join(":");
+    // Join the time parts back together
+    let newTime = timeParts.join(":");
 
-  //   return newTime;
-  // }
+    return newTime;
+  }
 
   useEffect(() => {
     const storedTime = sessionStorage.getItem("ttl");
@@ -227,7 +228,7 @@ function Navbar1() {
                     </td>
                     {/* <td>{data.location}</td> */}
                     <td>{data.rush}</td>
-                    <td>{data.time}</td>
+                    <td>{convertTimeTo12HourFormat(data.time)}</td>
                     <td>
                       <button
                         className="location-tab"
